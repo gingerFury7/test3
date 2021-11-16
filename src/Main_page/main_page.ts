@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import Login from './App.vue'
-import router from './router'
+import Main_page from './Main_page.vue'
+import router from '@/router'
 
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css';
@@ -9,12 +9,12 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-Vue.use(VueMaterial)
+Vue.config.productionTip = false;
+
+Vue.use(VueMaterial);
 Vue.use(BootstrapVue)
 
-Vue.config.productionTip = false
-
 new Vue({
-  router,
-  render: h => h(Login)
+    router,
+    render: h => h(Main_page)
 }).$mount('#app')
